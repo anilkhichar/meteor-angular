@@ -72,6 +72,8 @@ angular.module('app').controller('ItemCtrl', ['$scope', '$meteor', function($sco
     $scope.items = $meteor.collection(Items);
     $scope.tasksLoaded = true;
   });
+  
+  //$scope.items = $meteor.collection(Items).subscribe('items');
       
   $scope.endLimit = 0;
   $scope.order_by = 'datetime';
