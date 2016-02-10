@@ -1,0 +1,13 @@
+<div 
+  ng-init="col_init();"
+  ng-dropdown-multiselect=""
+  options="columns"
+  selected-model="c_dropdown_model"
+  checkboxes="true"
+  translation-texts="c_dropdown_translation_texts"
+  extra-settings="c_dropdown_settings"
+  events="{
+    onItemSelect: col_select,
+    onItemDeselect: col_deselect,
+    onDeselectAll: col_unchk_all}"
+></div>
