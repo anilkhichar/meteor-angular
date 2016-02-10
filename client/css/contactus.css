@@ -1,0 +1,238 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: box;
+  box-align: center;
+  box-pack: center;
+  transform: translate3d(0, 0, 0);
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* body {
+  font-family: "Raleway", sans-serif;
+  background: #373737;
+  color: #ebebeb;
+} */
+
+.container {
+  width: 20em;
+  position: relative;
+}
+
+form.hidden {
+  position: absolute;
+  width: 20em;
+  top: -100em;
+  -moz-transform: scale(0.25);
+  -ms-transform: scale(0.25);
+  -webkit-transform: scale(0.25);
+  transform: scale(0.25);
+  -moz-transition: -moz-transform 0.5s ease-in, top 0.5s ease-in 0.4s;
+  -o-transition: -o-transform 0.5s ease-in, top 0.5s ease-in 0.4s;
+  -webkit-transition: -webkit-transform 0.5s ease-in, top 0.5s ease-in;
+  -webkit-transition-delay: 0s, 0.4s;
+  transition: transform 0.5s ease-in, top 0.5s ease-in 0.4s;
+}
+
+legend {
+  background: #5C8AB8;
+  color: white;
+  padding: 1em 1.25em;
+  font-size: 1.75em;
+  border-radius: 0.2em 0.2em 0 0;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+legend:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #5C8AB8 transparent transparent;
+  border-width: 0.4em;
+  left: 2.2em;
+  top: 100%;
+}
+
+fieldset {
+  background: #ddddde;
+  width: 100%;
+  padding: 1.75em 0 0.25em;
+}
+
+label {
+  display: block;
+  color: #646d76;
+  position: relative;
+  
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.contact{
+  margin: 0 2em 0.75em;
+}
+label input, label textarea {
+  display: block;
+  font-size: 1em;
+  /* width: 100%; */
+  margin: 0.25em 0;
+  padding: 0.5em 0.75em;
+  border: none;
+  background: #f9f9fa;
+  border-radius: 0.2em;
+  font-family: "Raleway", sans-serif;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+label input:focus, label textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+label textarea {
+  min-height: 6em;
+}
+
+.form-controls {
+  padding: 0.25em 2em 1.5em;
+  background: #ddddde;
+  border-radius: 0 0 0.2em 0.2em;
+}
+.form-controls .btn {
+  color: white;
+  padding: 1em 0;
+  border-radius: 0.25em;
+  border: none;
+  display: block;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+}
+.form-controls .btn-send {
+  background: #60a531;
+  width: 100%;
+  font-size: 1.25em;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.form-controls .btn-send:hover {
+  background: #55912b;
+}
+.form-controls [disabled] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: default;
+}
+
+.required, .ok, .invalid {
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.required:before, .ok:before, .invalid:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  padding: 0.2em;
+  position: absolute;
+  top: 0.1em;
+  right: 0.1em;
+  font-size: 1.5em;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.required:before {
+  content: "\f069";
+  color: #efefef;
+}
+
+.invalid:before {
+  content: "\f057";
+  color: rgba(165, 49, 57, 0.5);
+}
+
+.ok:before {
+  content: "\f058";
+  color: #60a531;
+  -moz-transition: -moz-transform 0.5s linear;
+  -o-transition: -o-transform 0.5s linear;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.sent {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  -moz-transition: all 0.5s ease-in-out 1s;
+  -o-transition: all 0.5s ease-in-out 1s;
+  -webkit-transition: all 0.5s ease-in-out;
+  -webkit-transition-delay: 1s;
+  transition: all 0.5s ease-in-out 1s;
+}
+.sent.hidden {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+.sent h1 {
+  font-size: 3em;
+  text-align: center;
+}
+.sent h1 small {
+  font-size: 0.5em;
+  font-weight: 400;
+  display: block;
+  text-align: right;
+  margin-top: 0.5em;
+}
+
+.no-placeholder {
+  display: none;
+}
+.ie-lt9 .no-placeholder {
+  display: block;
+}

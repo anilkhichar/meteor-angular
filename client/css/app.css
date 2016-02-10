@@ -1,0 +1,75 @@
+/* CSS declarations go here */
+
+.no_margin {
+  margin: 0px !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.no-padding-left {
+  padding-left: 0 !important;
+}
+
+.no_padding {
+  padding: 0 !important;
+}
+
+.full_width{
+  width: 100% !important;
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+.dropdown-menu >li:not(:nth-child(4)){
+  cursor: pointer !important;
+}
+
+.active {
+  background-color: #e7e7e7;
+}
+
+.selected-menu {
+  background-color: #337ab7 !important;
+}
+
+.navbar-inverse {
+  background-color: #205080 !important;
+}
+
+.navbar-inverse .navbar-nav > li {
+  margin-right: 2px;
+}
+
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
+  color: #FFFFFF !important;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  background-color: #337ab7 !important;
+}
+
+.fixed-table-layout {
+  table-layout: fixed;
+}
+
+.infinite-table-content {
+  overflow-x: auto;
+  word-wrap: break-word;
+  display: block;
+  width: 100%;
+}
+
+#scroll-container {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.accord-heading-content{
+  padding-top: 0.6%;
+}
+.accordion-toggle:focus{outline: none;}

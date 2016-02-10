@@ -1,0 +1,55 @@
+<accordion>
+  <accordion-group is-open="filter_accord.open">
+    <accordion-heading>
+      <div class="row">
+        <div class="col-xs-6 accord-heading-content">
+          <i class="pull-left fa" 
+            ng-class="{'fa-chevron-down': filter_accord.open, 'fa-chevron-right': !filter_accord.open}"></i> Filters
+        </div>
+        <div class="col-xs-6 pull-right">
+          <div class="pull-right" filter-dropdown
+            filter-columns="columns" id-prop="idProp" display-prop='displayProp'
+            ng-click="$event.preventDefault();$event.stopPropagation();"></div>
+          </div>
+       </div>
+    </accordion-heading>
+    
+    <div class="row" ng-repeat="colsGroup in columns | filter: {filter_visible: true} | groupBy:6">
+      <div class="col-xs-2 form-group" ng-repeat="col in colsGroup">
+        
+        <label class="cursor_pointer" for="{{col.id}}">{{col.filter_label}}</label>
+        
+        <div ng-if="col.filter_type=='list'" filter-multi-select
+          filter-columns="columns" filter-items="filterItems" items="items" list-identifier="col.id" ></div>
+        
+        <div ng-if="col.filter_type=='text'" >          
+          <input type="text" ng-model="col.filter_text" ng-keyup="filter_trigger();"
+            id="{{col.id}}" name="{{col.id}}"
+            class="small_input form-control" placeholder="{{col.filter_placeholder}}"> 
+        </div>
+        
+        <div ng-if="col.filter_type=='numeric'" >
+          <div class="col-xs-6 no-padding-left">
+            <select class="small_input form-control" ng-model="col.filter_operator"
+              ng-change="filter_trigger();" >
+                <option value="gt">&gt;</option>
+                <option value="lt">&lt;</option>
+            </select>
+          </div>
+          <div class="col-xs-6 no-padding-right">
+            <input type="text" ng-model="col.filter_text" ng-keyup="filter_trigger();"
+              id="{{col.id}}" name="{{col.id}}"
+              class="small_input form-control" placeholder="{{col.filter_placeholder}}" >
+           </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="row" >
+      <div class="col-xs-10"></div>
+      <div class="col-xs-2">
+        <button class="btn btn-warning btn-padding pull-right" ng-click="filter_clear();">Clear Filters</button>
+      </div>
+    </div>
+  </accordion-group>
+</accordion>

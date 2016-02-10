@@ -1,0 +1,13 @@
+<div 
+  ng-init="fcol_init();"
+  ng-dropdown-multiselect=""
+  options="columns"
+  selected-model="f_dropdown_model"
+  checkboxes="true"
+  translation-texts="f_dropdown_translation_texts"
+  extra-settings="f_dropdown_settings"
+  events="{
+    onItemSelect: fcol_select,
+    onItemDeselect: fcol_deselect,
+    onDeselectAll: fcol_unchk_all}"
+></div>

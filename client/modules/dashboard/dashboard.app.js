@@ -1,0 +1,1 @@
+angular.module('dashboard.app', ['common.app']);

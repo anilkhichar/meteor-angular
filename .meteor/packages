@@ -6,17 +6,17 @@
 
 meteor-base             # Packages every Meteor app needs to have
 mongo                   # The database Meteor supports right now
-session                 # Client-side reactive dictionary for your app
 jquery                  # Helpful client-side library
 tracker                 # Meteor's client-side reactive programming library
-
 standard-minifiers      # JS/CSS minifiers run for production mode
-es5-shim                # ECMAScript 5 compatibility for older browsers.
-ecmascript              # Enable ECMAScript2015+ syntax in app code
+
+twbs:bootstrap
 
 angular
-natestrauser:font-awesome
-accounts-meteor-developer
-blaze-html-templates
+angular:angular-sanitize
+angular:angular-animate
+angularui:angular-ui-router
+angularui:angular-ui-bootstrap #twbs:bootstrap
+salma:angularjs-dropdown-multiselect # http://dotansimha.github.io/angularjs-dropdown-multiselect/
 netanelgilad:ng-infinite-scroll
-twbs:bootstrap
+natestrauser:font-awesome
