@@ -17,6 +17,10 @@
   padding: 0 !important;
 }
 
+.no_border{
+	border:none;
+}
+
 .full_width{
   width: 100% !important;
 }
